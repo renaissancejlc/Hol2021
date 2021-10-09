@@ -1,0 +1,139 @@
+﻿/*  Title: style sheet
+        Purpose: intended for index.html
+        Theme: Green-Yellow, outdoorsy
+        Author: Renaissance Carr
+*/
+body {
+    background-color: rgb(252 213 38); /*golden background*/
+}
+h1{
+    position:fixed;
+}
+h4 {
+    color: hsl(35 100% 30%); /*burnt orange header*/
+    margin-left: 10px; /*absolute value, longhand margin*/
+}
+h3 {
+    font-size: 25px;
+    color: #11620e; /*forest green header*/
+    margin-left: 10px; /*absolute value, longhand margin*/
+}
+h2 {
+    color: #11620e; /*forest green header*/
+    margin: 10px 20px 25px 20px; /*shorthand margin*/
+}
+.Component {
+}
+.Component-heading {
+    font-size: 1.5em; /*relative to parent*/
+}
+.Component-body {
+    display: flex;
+    font-size: 20px; /*absolute unit*/
+}
+.wrapper {
+    font-size: 1.2em; /*relative to parent*/
+    text-decoration: underline;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: auto;
+    justify-items: start;
+}
+
+.px {
+    width: 150px; /*absolute unit*/
+    height: 50px;
+    margin-left: 1cm; /*absolute unit*/
+}
+
+.vw {
+    width: 24vw; /*relative to 1% of viewport's width*/
+    margin-left: 10mm; /*absolute unit*/
+}
+
+.em {
+    width: 11em; /*relative to parent*/
+    margin-left: 1pc; /*absolute unit*/
+}
+p,
+ul {
+    flex-basis: auto;
+    display: inline;
+    border: 1.5px groove hsl(35 100% 30%); /*tan-brown*/
+    padding: .1em .1em .1em .1em; /*long hand padding*/
+}
+
+.block,
+li {
+    display: inline-block;
+    border: 1.5px inset #1e781b; /*green*/ /*shorthand*/
+    padding: .1em;
+}
+li[class="a"]{ /*attribute selector*/
+    color: red;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    color: dimgray;
+    position: static;
+}
+
+.box {
+    display: flex inline;
+    flex-grow:2;
+    flex-basis: auto;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(126 190 112); /*pale green*/ /*long hand*/
+    background-color: rgb(207 141 16); /*darker gold*/
+    padding: 1px;
+    margin: 20px;
+    text-align: center;
+}
+button:hover {
+    color: blue;
+}
+
+button:active{
+    color: red;
+}
+
+@media screen and (max-width: 300px) and (orientation: landscape) {
+    body {
+        font-size: 5px;
+    }
+}
+@font-face {
+    font-family: "Staatliches";
+    src: url("https://fonts.google.com/");
+}
+html {
+    font-family: Staatliches, Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+/*media query checks for small screen and reduces font size*/
+#special,.emphasize {
+    background-color: darkgoldenrod; /*class selector, id selector, selector list*/
+}
+* {
+    font-style: inherit; /*universal selector*/
+}
+
+p::first-letter{font-size:1.5em;} /*element selector*/
+ul > li { /*child combinator */
+    font-style: italic;
+}
+.box p { /*descendent combinator*/
+    font-style: unset;
+}
+h3 + ul { /*adjacent sibling combinator*/
+    background-color: black;
+}
+h4 ~ img { /*gen sibling combinator*/
+     justify-content: left;
+}
+    /*
+Combining Two Selectors (element.class)
+
+*/
