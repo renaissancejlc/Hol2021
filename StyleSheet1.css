@@ -1,25 +1,24 @@
 ﻿/*  Title: style sheet
         Purpose: intended for index.html
-        Theme: Green-Yellow, outdoorsy
         Author: Renaissance Carr
 */
 body {
-    background-color: rgb(252 213 38); /*golden background*/
+    background-color: #56a2e4; /*dark purple background*/
 }
 h1{
     position:fixed;
 }
 h4 {
-    color: hsl(35 100% 30%); /*burnt orange header*/
+    color: hsl(183 80% 70%); /*cyan header*/
     margin-left: 10px; /*absolute value, longhand margin*/
 }
 h3 {
     font-size: 25px;
-    color: #11620e; /*forest green header*/
+    color: #69096d /*dark darkpurple header*/
     margin-left: 10px; /*absolute value, longhand margin*/
 }
 h2 {
-    color: #11620e; /*forest green header*/
+    color: white; 
     margin: 10px 20px 25px 20px; /*shorthand margin*/
 }
 .Component {
@@ -35,7 +34,7 @@ h2 {
     font-size: 1.2em; /*relative to parent*/
     text-decoration: underline;
     display: grid;
-    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-columns: 200px 250px 200px 200px;
     grid-template-rows: auto;
     justify-items: start;
 }
@@ -59,24 +58,31 @@ p,
 ul {
     flex-basis: auto;
     display: inline;
-    border: 1.5px groove hsl(35 100% 30%); /*tan-brown*/
+    border: 1.5px groove #5cdbc9; /*cyan*/
     padding: .1em .1em .1em .1em; /*long hand padding*/
 }
 
 .block,
 li {
     display: inline-block;
-    border: 1.5px inset #1e781b; /*green*/ /*shorthand*/
+    border: 1.5px inset #1e781b; /*blue*/ /*shorthand*/
     padding: .1em;
 }
 li[class="a"]{ /*attribute selector*/
-    color: red;
+    color: #7bd6eb; /*cyan*/
+}
+h4[class="b"]{
+    background-color: #eecdec; /*light pink*/
+    color: rgb(67 21 146);
+}
+h4[class="c"] {
+    background-color: white; 
 }
 
 ul {
     display: flex;
     list-style: none;
-    color: dimgray;
+    color: black;
     position: static;
 }
 
@@ -86,8 +92,8 @@ ul {
     flex-basis: auto;
     border-width: 2px;
     border-style: solid;
-    border-color: rgb(126 190 112); /*pale green*/ /*long hand*/
-    background-color: rgb(207 141 16); /*darker gold*/
+    border-color: darkblue;  /*long hand*/
+    background-color: rgb(221 186 243); /*pale purple*/
     padding: 1px;
     margin: 20px;
     text-align: center;
@@ -114,7 +120,8 @@ html {
 }
 /*media query checks for small screen and reduces font size*/
 #special,.emphasize {
-    background-color: darkgoldenrod; /*class selector, id selector, selector list*/
+    justify-self: center;
+    background-color: hsl(183 80% 70%); /*class selector, id selector, selector list*/
 }
 * {
     font-style: inherit; /*universal selector*/
@@ -128,12 +135,8 @@ ul > li { /*child combinator */
     font-style: unset;
 }
 h3 + ul { /*adjacent sibling combinator*/
-    background-color: black;
+    background-color:rebeccapurple;
 }
 h4 ~ img { /*gen sibling combinator*/
      justify-content: left;
 }
-    /*
-Combining Two Selectors (element.class)
-
-*/
